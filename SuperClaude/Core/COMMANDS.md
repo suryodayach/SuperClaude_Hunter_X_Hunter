@@ -125,6 +125,21 @@ performance-profile: "optimization"
 
 **`/design [domain] [flags]`** - Design orchestration | Auto-Persona: Architect, Frontend | MCP: Magic, Sequential, Context7
 
+**`/hxh [task] [flags]`**
+```yaml
+---
+command: "/hxh"
+category: "Team Collaboration & Development"
+purpose: "Hunter x Hunter development team with collaborative problem-solving and parallel execution"
+wave-enabled: true
+performance-profile: "complex"
+---
+```
+- **Auto-Persona**: HXH Team (Biscuit, Gon, Killua, Kurapika, Leorio, Hisoka, Illumi, Netero, Meruem, Chrollo)
+- **MCP Integration**: All servers with WebSearch priority for research
+- **Tool Orchestration**: [Read, Write, Edit, MultiEdit, Bash, Glob, TodoWrite, Task, WebSearch, Grep]
+- **Arguments**: `[task]`, `--team`, `--lead`, `--thinking`, `--research-first`, `--nen-mode`
+
 ### Meta & Orchestration Commands
 
 **`/index [query] [flags]`** - Command catalog browsing | Auto-Persona: Mentor, Analyzer | MCP: Sequential
@@ -152,8 +167,9 @@ complex: "Resource-intensive with comprehensive analysis"
 - **Testing**: test
 - **Documentation**: document
 - **Version-Control**: git
+- **Team Collaboration**: hxh
 - **Meta**: index, load, spawn
 
 ### Wave-Enabled Commands
-7 commands: `/analyze`, `/build`, `/design`, `/implement`, `/improve`, `/task`, `/workflow`
+8 commands: `/analyze`, `/build`, `/design`, `/implement`, `/improve`, `/task`, `/workflow`, `/hxh`
 

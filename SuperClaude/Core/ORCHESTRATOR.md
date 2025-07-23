@@ -105,6 +105,13 @@ wave_eligible:
   operation_indicators: [improve, optimize, refactor, modernize, enhance, audit, transform]
   scale_indicators: [entire, complete, full, comprehensive, enterprise, large, massive]
   typical_operations: [comprehensive_improvement, systematic_optimization, enterprise_transformation, progressive_enhancement]
+
+hxh_team:
+  keywords: [team, collaborate, Hunter x Hunter, HxH, best practices, research first, collective, together]
+  complexity_indicators: [multi-domain, complex feature, team effort, collaborative]
+  character_triggers: {gon: [UI, user-friendly, simple], killua: [fast, optimize, performance], kurapika: [security, protect, threat]}
+  operation_indicators: [build together, implement as team, collaborative development]
+  typical_operations: [team_implementation, collaborative_development, research_based_building]
 ```
 
 #### Operation Type Classification
@@ -209,6 +216,12 @@ wave-strategies:
 | "security audit enterprise" | complex | security | --wave-mode --wave-validation | 95% |
 | "modernize legacy system" | complex | legacy | --wave-mode --enterprise-waves --wave-checkpoint | 92% |
 | "comprehensive code review" | complex | quality | --wave-mode --wave-validation --systematic-waves | 94% |
+| "team collaboration needed" | moderate | any | /hxh command, HXH team personas | 93% |
+| "build with best practices" | moderate | any | /hxh --research-first, WebSearch integration | 91% |
+| "complex feature team work" | complex | multi | /hxh full team, --thinking ultrathink | 95% |
+| "frontend with personality" | simple | frontend | /hxh --team "gon,killua,hisoka" | 89% |
+| "security implementation team" | complex | security | /hxh --team "kurapika,illumi,netero" | 94% |
+| "performance optimization team" | complex | performance | /hxh --team "killua,meruem" --nen-mode | 92% |
 
 ### Decision Trees
 
@@ -264,6 +277,14 @@ wave-strategies:
 - **Enterprise Scale**: `enterprise_waves`
 - **Default**: `systematic_waves`
 
+**HXH Team Strategy Selection**:
+- **Frontend Focus**: Gon + supporting cast
+- **Security Critical**: Kurapika + validation team
+- **Performance Optimization**: Killua + Meruem combo
+- **Complex Architecture**: Netero + full wisdom council
+- **Crisis Mode**: Biscuit command + all hands
+- **Research Heavy**: Full team with WebSearch priority
+
 **Auto-Delegation Triggers**:
 ```yaml
 directory_threshold:
@@ -290,6 +311,21 @@ token_optimization:
   condition: estimated_tokens > 20000
   action: auto_enable --delegate --aggregate-results
   confidence: 80%
+
+hxh_team_triggers:
+  condition: multi_domain AND collaborative_keywords
+  action: suggest /hxh command with team composition
+  confidence: 88%
+
+hxh_crisis:
+  condition: production_issue OR security_breach
+  action: auto_enable /hxh --crisis-mode --parallel-hxh
+  confidence: 95%
+
+hxh_research:
+  condition: new_technology AND best_practices_needed
+  action: auto_enable /hxh --research-first --evolution-mode
+  confidence: 90%
 ```
 
 **Wave Auto-Delegation Triggers**:
@@ -352,6 +388,16 @@ token_optimization:
 **Documentation Tasks** → `--persona-scribe=en`
 - **Trigger Conditions**: README, wiki, guides, commit messages, API docs
 - **Confidence Threshold**: 70% for automatic activation
+
+**HXH Team Activation** → `/hxh` + character selection
+- **Trigger Conditions**: Team keywords, multi-domain complexity, collaborative needs
+- **Auto-Team Selection**:
+  - Frontend heavy → Gon (lead), Killua, Hisoka
+  - Security critical → Kurapika (lead), Illumi, Netero
+  - Performance focus → Killua (lead), Meruem, Hisoka
+  - Full-stack → Chrollo (lead), varied team
+  - Architecture → Netero (lead), Meruem, Biscuit
+- **Confidence Threshold**: 85% for team activation
 
 #### Flag Auto-Activation Patterns
 

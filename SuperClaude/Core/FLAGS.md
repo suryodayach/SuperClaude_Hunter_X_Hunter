@@ -168,6 +168,65 @@ Flag system for Claude Code SuperClaude framework with auto-activation and confl
 - Pauses for review and approval before each cycle
 - Allows manual guidance and course correction
 
+## HXH Team Collaboration Flags
+
+**`--nen-mode`**
+- Enable character special Nen abilities
+- Unlocks unique implementation approaches per character
+- Auto-activates: Complex challenges, performance critical tasks
+- Examples: Killua's Godspeed, Netero's 100-Type patterns
+
+**`--debate-mode`**
+- Extended team discussions with character interactions
+- Healthy disagreements lead to better solutions
+- Auto-activates: Multiple valid approaches detected
+- Time-boxed to prevent endless debates
+
+**`--crisis-mode`**
+- Emergency response for production issues
+- Biscuit takes absolute command
+- Parallel debugging and rapid resolution
+- Auto-activates: Production down, critical security breach
+
+**`--team-chemistry`**
+- Enable chemistry bonuses for compatible pairs
+- Performance boosts for synergistic combinations
+- Auto-activates: Compatible team members selected
+- Examples: Gon+Killua (+20% integration), Hisoka+Illumi (+35% quality)
+
+**`--evolution-mode`**
+- Meruem's learning system activation
+- Solutions improve with each iteration
+- Pattern recognition across tasks
+- Auto-activates: Repetitive tasks, optimization challenges
+
+**`--parallel-hxh`**
+- Force true parallel execution with Task tool
+- Each character runs as independent sub-agent
+- Synchronized at merge points
+- Auto-activates: >3 team members, complex tasks
+
+**`--research-first`**
+- Extensive WebSearch before implementation
+- Each character researches their domain
+- Collective knowledge synthesis
+- Auto-activates: New technologies, unknown domains
+
+**`--team [characters]`**
+- Manual team selection (comma-separated)
+- Override auto-selection algorithm
+- Examples: --team "gon,killua,hisoka"
+
+**`--lead [character]`**
+- Set team leader (default: biscuit)
+- Leader has final decision authority
+- Coordinates team efforts
+
+**`--thinking [level]`**
+- Override character default thinking modes
+- Options: think, think-hard, ultrathink
+- Applied team-wide or per character
+
 ## Persona Activation Flags
 
 **Available Personas**:
@@ -182,6 +241,18 @@ Flag system for Claude Code SuperClaude framework with auto-activation and confl
 - `--persona-qa`: Quality advocate, testing specialist
 - `--persona-devops`: Infrastructure specialist
 - `--persona-scribe=lang`: Professional writer, documentation specialist
+
+**HXH Team Personas** (auto-activated by `/hxh` command):
+- `--hxh-biscuit`: Team lead, quality enforcer, architectural guidance
+- `--hxh-gon`: Frontend/UX enthusiast, user-focused development
+- `--hxh-killua`: Backend/performance expert, lightning optimization
+- `--hxh-kurapika`: Security/architecture specialist, threat modeling
+- `--hxh-leorio`: DevOps/infrastructure, practical solutions
+- `--hxh-hisoka`: Code quality/refactoring, aesthetic improvements
+- `--hxh-illumi`: QA/testing specialist, comprehensive coverage
+- `--hxh-netero`: Senior architect, wisdom and patterns
+- `--hxh-meruem`: AI/ML/optimization, rapid learning
+- `--hxh-chrollo`: Full-stack/adaptable, technique collector
 
 ## Introspection & Transparency Flags
 
@@ -213,9 +284,17 @@ Flag system for Claude Code SuperClaude framework with auto-activation and confl
 8. Sub-Agent delegation: explicit --delegate > auto-detection
 9. Loop mode: explicit --loop > auto-detection based on refinement keywords
 10. --uc auto-activation overrides verbose flags
+11. HXH flags: --crisis-mode > --nen-mode > --debate-mode
+12. Team selection: explicit --team > auto-selection
 
 ### Context-Based Auto-Activation
 
 **Wave Auto-Activation**: complexity ≥0.7 AND files >20 AND operation_types >2
 **Sub-Agent Auto-Activation**: >7 directories OR >50 files OR complexity >0.8
 **Loop Auto-Activation**: polish, refine, enhance, improve keywords detected
+**HXH Team Auto-Activation**: 
+- Multi-domain detected → Full team assembly
+- "team", "collaborate", "together" keywords → /hxh command suggestion
+- Frontend + Backend + Security → Auto-select Gon, Killua, Kurapika
+- Performance critical → --nen-mode activation
+- Production issues → --crisis-mode activation
